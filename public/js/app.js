@@ -1041,10 +1041,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 
 __webpack_require__(12);
-
 window.Vue = __webpack_require__(35);
 
 Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
+
+//create app
+var app = new Vue({
+    el: '#app',
+    data: {}
+});
+
+/*
+Vue.component('navbar', {
+    template: 'components/NavComponent.vue'
+});
+*/
 
 /***/ }),
 /* 12 */

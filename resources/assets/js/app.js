@@ -6,9 +6,18 @@
  */
 
 require('./bootstrap');
-
 window.Vue = require('vue');
 import Buefy from 'buefy';
-Vue.use(Buefy)
+Vue.use(Buefy);
 
+//create app
+var app = new Vue({
+    el:'#app',
+    data:{}
+});
 
+/*
+Vue.component('navbar', {
+    template: 'components/NavComponent.vue'
+});
+*/

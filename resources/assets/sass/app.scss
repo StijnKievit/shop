@@ -5,14 +5,17 @@
 // Variables
 @import "variables";
 
-//  Font awesome
-@import "~font-awesome/scss/font-awesome";
+// Font awesome
+//@import "node_modules/font-awesome/scss/font-awesome";
+@import "font-awesome/font-awesome";
 
-//  Bulma
-@import "~bulma/bulma";
+// Bulma
+@import "node_modules/bulma/bulma";
 
-//  Buefy (bulma view modules)
-@import "~buefy/src/scss/buefy";
+// Buefy (bulma view modules)
+@import "node_modules/buefy/src/scss/buefy";
 
-// Bootstrap
-//@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+// Custom SASS
+@import "overrides";
+@import "helpers";
+@import "styles";
