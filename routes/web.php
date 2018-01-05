@@ -27,3 +27,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/{category?}', function($category = null){
+    if($category){
+        return $category;
+    }
+    return 'hoofd overview';
+});
+
+Route::get('/{category}/{name}/{id}', function ($category, $name, $id) {
+    //product route
+    return 'product route: '.$category. '/' . $name . '/' . $id;
+})->where(['id' => '[0-9]+', 'name' => '[a-z]+', 'category' => '[a-z]+']);
