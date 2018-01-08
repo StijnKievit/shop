@@ -17254,10 +17254,6 @@ label.panel-block:hover {
   left: auto;
 }
 
-*.dropdown.is-open .dropdown-menu {
-  display: block;
-}
-
 .m-t-5 {
   margin-top: 5px !important;
 }
