@@ -12,12 +12,15 @@ class FormHelper
 {
     protected static $viewPath = 'helpers/formhelper/';
 
-    public static function openForm(){
+    public static function open($method = 'POST', $action = ''){
 
-        return view(self::$viewPath . 'open');
+        return view(self::$viewPath . 'open', [
+            'method' => $method,
+            'action' => $action
+        ]);
     }
 
-    public static function closeForm(){
+    public static function close(){
         return view(self::$viewPath . 'close');
     }
 
@@ -32,6 +35,14 @@ class FormHelper
 
     public static function TextArea($name, $label, $options = array()){
         return view(self::$viewPath . 'textarea', [
+            'name' => $name,
+            'label' => $label,
+            'options'   =>  $options
+        ]);
+    }
+
+    public static function Number($name, $label, $options = array()){
+        return view(self::$viewPath . 'number', [
             'name' => $name,
             'label' => $label,
             'options'   =>  $options
@@ -67,7 +78,8 @@ class FormHelper
             'name' => $name,
             'label' => $label,
             'selectOptions' => $selectOptions,
-            'options'   =>  $options
+            'options'   =>  $options,
+            'field_id'  =>  rand(1,1000)
         ]);
     }
 
@@ -81,6 +93,14 @@ class FormHelper
         return view(self::$viewPath . 'button', [
             'type' => $type,
             'value' => $value,
+            'label' => $label,
+            'options'   =>  $options
+        ]);
+    }
+
+    public static function Currency($name, $label, $options = array()){
+        return view(self::$viewPath . 'currency', [
+            'name' => $name,
             'label' => $label,
             'options'   =>  $options
         ]);

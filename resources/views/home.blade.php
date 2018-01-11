@@ -20,31 +20,6 @@
 
                     You are logged in!
                 </div>
-
-                {!! FormHelper::openForm() !!}
-                {!! FormHelper::TextField('name', 'please fill in a name', array('class' => 'my custom class', 'placeholder' => 'this is a custom placeholder')) !!}
-                {!! FormHelper::TextArea('textarea', 'textarea', []) !!}
-                {!! FormHelper::Password('password', 'password', []) !!}
-
-                {!! FormHelper::Radio('password', 'password', []) !!}
-                {!! FormHelper::Checkbox('password', 'password', []) !!}
-                {!! FormHelper::Password('password', 'password', []) !!}
-                {!! FormHelper::Buttons(array(
-                    [   'type' =>  'submit',
-                        'value' =>  'Opslaan',
-                        'label' =>  'Opslaan',
-                        'options'    =>  ['class' => 'is-link']],
-                    [   'type' =>  'reset',
-                        'value' =>  'Reset',
-                        'label' =>  'Reset',
-                        'options'    =>  ['class' => 'is-text']]
-                ), []) !!}
-                {!! FormHelper::Button('submit', 'submit', 'submit', []) !!}
-
-
-
-
-                {!! FormHelper::closeForm() !!}
             </div>
         </div>
     </div>

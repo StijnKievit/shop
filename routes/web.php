@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Request;
 */
 
 
-Route::resource('products', 'Manage\ProductController');
+Route::resource('products', 'ProductController');
+Route::resource('categories', 'CategoryController');
+
+
 Route::get('/', function () {
     return view('welcome');
 });

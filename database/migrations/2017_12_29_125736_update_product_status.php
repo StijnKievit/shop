@@ -16,6 +16,7 @@ class UpdateProductStatus extends Migration
         //update posts table
         Schema::table('products', function($table){
             $table->enum('status', ['new','in process','sold'])->after('price');
+            $table->integer('sale')->after('price');
         });
     }
 
@@ -26,8 +27,9 @@ class UpdateProductStatus extends Migration
      */
     public function down()
     {
-        Schema::table('product', function($table){
-            $table->dropColumn('status');
+        Schema::table('products', function($table){
+            //$table->dropColumn('status');
+            //$table->dropColumn('sale');
         });
     }
 }
